@@ -1,6 +1,6 @@
 <?php
 
-namespace (#theme_namespace#)\Helper;
+namespace ActionHbg\Helper;
 
 class CacheBust
 {

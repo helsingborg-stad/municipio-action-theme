@@ -1,10 +1,10 @@
 <?php
-namespace (#theme_namespace#);
+namespace ActionHbg;
 
 class App
 {
     public function __construct()
     {
-        new \(#theme_namespace#)\Theme\Enqueue();
+        new \ActionHbg\Theme\Enqueue();
     }
 }

@@ -1,7 +1,7 @@
-(#theme_namespace#) = (#theme_namespace#) || {};
-(#theme_namespace#).ExampleNamespace = (#theme_namespace#).Liquid || {};
+ActionHbg = ActionHbg || {};
+ActionHbg.ExampleNamespace = ActionHbg.Liquid || {};
 
-(#theme_namespace#).ExampleNamespace.ExampleClass = (function ($) {
+ActionHbg.ExampleNamespace.ExampleClass = (function ($) {
 
 	var classVariable = false;
 
