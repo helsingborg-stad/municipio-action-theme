@@ -20,9 +20,22 @@ $logotypeHeight: 54px;
     max-height: $headerHeight;
   }
 
-  .navbar nav > ul > li {
+  .navbar nav > ul > li,
+  .dropdown {
     line-height: $headerHeight; 
     height: $headerHeight;
+  }
+
+  .dropdown {
+    margin-top: 0;
+
+    ul {
+      line-height: 120%; 
+
+      li a {
+        padding: 8px;
+      }
+    }
   }
 
   .navbar nav > ul > li > a {
@@ -80,6 +93,7 @@ $logotypeHeight: 54px;
     margin: ($headerHeight - $logotypeHeight)/2 0;
     padding: 0;
     position: relative;
+    max-width: 190px;
     
     svg, img {
       height: $logotypeHeight; 

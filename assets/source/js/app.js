@@ -16,7 +16,7 @@ const observer = new IntersectionObserver((entries) => {
                 opacity: [0,1],
                 translateY: ['20px','0px'],
                 easing: 'spring(1, 80, 10, 0)',
-                delay: 400
+                delay: 150
             });
         } else {
             anime({
@@ -24,7 +24,7 @@ const observer = new IntersectionObserver((entries) => {
                 opacity: [1,0],
                 translateY: ['0','20px'],
                 easing: 'spring(1, 80, 10, 0)',
-                delay: 400
+                delay: 150
             });
         }
     });
@@ -43,8 +43,8 @@ anime({
 });
 
 anime({
-  targets: '.logotype .letter',
+  targets: '.home .logotype .letter',
   opacity: [0,1],
-  delay: anime.stagger(200),
+  delay: anime.stagger(150, {start: 0}),
   easing: 'spring(1, 80, 10, 0)'
 });
