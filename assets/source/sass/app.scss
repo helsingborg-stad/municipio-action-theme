@@ -17,6 +17,16 @@
 		color: #000;
 	}
 
+	.grid {
+		margin-left: -32px;
+		margin-right: -32px;
+
+		> * {
+			padding-left: 32px; 
+			padding-right: 32px;
+		}
+	}
+
 	@import 'components/article';
 	@import 'components/pagefooter';
 	@import 'components/header';
@@ -26,5 +36,6 @@
 	@import 'components/text';
 	@import 'components/button';
 	@import 'components/fillbox';
+	@import 'components/breadcrumb';
 }
 
