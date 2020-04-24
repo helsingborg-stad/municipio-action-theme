@@ -2,7 +2,7 @@ var ActionHbg;
 import anime from 'animejs/lib/anime.es.js';
 
 /* Sections */ 
-const codeElements = document.querySelectorAll('section.section .grid');
+const codeElements = document.querySelectorAll('section.section .grid, .main-footer .widget_text, .main-footer .logotype, .main-footer .widget_nav_menu');
 
 const observerConfig = {
     threshold: 0.2
@@ -48,3 +48,6 @@ anime({
   delay: anime.stagger(150, {start: 0}),
   easing: 'spring(1, 80, 10, 0)'
 });
+
+
+
