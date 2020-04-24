@@ -1,0 +1,25 @@
+.sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar), 
+.sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar),
+.box.box-filled { 
+  background: none;
+  padding: 0;
+
+  h1, h2, h3, h4, h5, h6,
+  .box-title {
+    padding: 0;
+    font-size: 30px;
+    line-height: 100%;
+    margin-bottom: 8px*2;
+  }
+}
+
+
+.sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar) ul, 
+.sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar) ul,
+.sidebar-right-sidebar .widget_search,
+.sidebar-left-sidebar .widget_search,
+.box.box-filled .box-content {
+  background: #13649A;
+  background: linear-gradient(-12deg, #13649A 0%, #54B3E4 100%);
+  padding: 40px;
+}

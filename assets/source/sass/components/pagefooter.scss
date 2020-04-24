@@ -1,0 +1,23 @@
+.page-footer {
+  .box.box-border {
+    box-shadow: none;
+    border: none;
+    border-top: 4px dotted #eee;
+    padding: 8px * 2 0 0 0;
+
+    .grid-auto,
+    .grid-fit-content {
+      padding: 0;
+    }
+
+    .pricon {
+      color: $color-pimary-dark;
+      transition: all 200ms; 
+    }
+    
+    .pricon:hover {
+      color: #000;
+    }
+
+  }
+}
