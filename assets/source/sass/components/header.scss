@@ -77,10 +77,36 @@ $logotypeHeight: 54px;
 
   .logotype, 
   .logotype {
-    padding: ($headerHeight - $logotypeHeight)/2 0;
+    margin: ($headerHeight - $logotypeHeight)/2 0;
+    padding: 0;
+    position: relative;
     
     svg, img {
       height: $logotypeHeight; 
     }
+
+    /*
+    &:before {
+      content: "ACTION";
+      position: absolute;
+      background: #13649A;
+      background: linear-gradient(90deg, #13649A 0%, #54B3E4 100%);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: $logotypeHeight;
+      font-weight: bold;
+      font-size: 58px;
+      letter-spacing: 11px;
+      text-indent: -8px;
+      opacity: 0;
+    }
+
+    &:hover:before {
+      opacity: 1;
+    }*/ 
   }
 }

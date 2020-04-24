@@ -41,3 +41,10 @@ anime({
   delay: 400,
   easing: 'spring(1, 80, 10, 0)'
 });
+
+anime({
+  targets: '.logotype .letter',
+  opacity: [0,1],
+  delay: anime.stagger(200),
+  easing: 'spring(1, 80, 10, 0)'
+});
