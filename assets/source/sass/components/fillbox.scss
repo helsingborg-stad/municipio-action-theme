@@ -1,6 +1,7 @@
 .sidebar-left-sidebar [class^="widget_"]:not(.widget_calendar), 
 .sidebar-right-sidebar [class^="widget_"]:not(.widget_calendar),
-.box.box-filled { 
+.sidebar-left-sidebar .box.box-filled,
+.sidebar-right-sidebar .box.box-filled { 
   background: none;
   padding: 0;
 
@@ -10,6 +11,11 @@
     font-size: 30px;
     line-height: 100%;
     margin-bottom: 8px*2;
+
+    color: #54B3E4; 
+		background: -webkit-linear-gradient(darken($color-primary-heading,2%), $color-primary-heading);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
   }
 }
 
