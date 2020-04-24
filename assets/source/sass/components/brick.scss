@@ -1,10 +1,14 @@
 .modularity-mod-posts,
-.mod-posts {
-
+.mod-posts,
+.breadcrumbs-wrapper + .grid .grid--columns {
   background: #13649A;
   background: linear-gradient(-12deg, #13649A 0%, #54B3E4 100%);
+}
 
-  .grid {
+.modularity-mod-posts .grid,
+.mod-posts .grid,
+.breadcrumbs-wrapper + .grid .grid--columns {
+
     margin-left: 0;
     margin-right: 0;
 
@@ -32,15 +36,8 @@
         background: #fff;
       }
     }
-
-  }
-
-  
 }
 
-.grid [class*="grid-"] {
-  position: relative;
-}
 
 .box-post-brick {
   overflow: hidden;
@@ -49,7 +46,6 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%); 
-  background: none !important;
   padding: 8px*2;
   transition: all 500ms;
 
@@ -66,7 +62,6 @@
     font-size: 2.6em;
     font-weight: bold;
     position: relative;
-    
 
     &:before {
       transition: width 200ms;
