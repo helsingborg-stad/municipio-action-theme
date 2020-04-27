@@ -44,20 +44,32 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%); 
+  top: 0;
+  bottom: 0;
   padding: 8px*2;
   transition: all 500ms;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     text-decoration: none;
-    transform: translateY(-55%); 
-
-    .post-title:before {
-      width: 100%;
-    }
   }
 
+  &:hover .box-content,
+  &:hover .box-post-brick-lead {
+    transform: translateY(-5%);
+  }
+
+  &:hover .post-title:before {
+    width: 100%;
+  }
+
+  br {
+    display: none;
+  }
+  
   .post-title {
     font-size: 2.6em;
     font-weight: bold;
@@ -81,10 +93,11 @@
 
   .box-post-brick-lead,
   .box-content {
+    flex: none;
     opacity: 1;
     transform: none; 
     position: relative;
-    height: auto;
+    height: initial;
     text-align: center;
     font-size: 1.1em;
   }
