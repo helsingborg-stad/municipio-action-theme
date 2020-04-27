@@ -1,0 +1,74 @@
+/* Trigger */
+.site-header.header-casual .menu-trigger,
+.site-header.header-jumbo .menu-trigger,
+.site-header.header-contrasted-nav .menu-trigger {
+
+  margin: ($headerHeight - 28px)/2 0;
+
+  &:before {
+    content: "MENY";
+    color: $color-pimary-dark;
+    padding: 0 8px; 
+    font-weight: bold;
+  } 
+
+  .menu-icon,
+  .menu-icon:after,
+  .menu-icon:before {
+    background: $color-pimary-dark;
+  }
+
+  &.open .menu-icon {
+    background: transparent;
+
+    &:after,
+    &:before {
+      background: $color-pimary-dark;
+    }
+  }
+}
+
+/* Menu */
+
+.nav-mobile-menu {
+
+  .nav-mobile {
+    background: #13649A;
+    background: linear-gradient(-12deg, #13649A 0%, #54B3E4 100%);
+
+    > ul {
+      max-width: 600px;
+      margin: 0px auto;
+      padding: 60px 0;
+    }
+
+    .current-menu-item > a {
+      font-weight: bold;
+    }
+  }
+
+  .search {
+    background: #fff;
+
+    .input-group,
+    .input-group-addon-btn {
+      height: 60px;
+    }
+
+    .input-group .form-control {
+      height: 60px;
+      box-shadow: none;
+      border: 2px solid $color-pimary-light;
+      border-right: none;
+    }
+
+    .input-group-addon-btn input {
+      padding: 0 8px*3;
+      font-size: 1.1em;
+      text-transform: uppercase;
+      background-color: $color-pimary-light;
+      border-color: $color-pimary-light;
+    }
+  }
+
+}

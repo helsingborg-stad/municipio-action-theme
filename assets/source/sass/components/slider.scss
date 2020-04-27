@@ -1,13 +1,31 @@
 /* Slider */ 
-.slider.slider-layout-default {
+.sidebar-slider-area {
+  overflow: visible;
+}
+
+.slider {
   .text-block  {
-    font-size: 3em;
-    font-weight: bold;
+    font-size: .6em;
   }
+}
+
+.slider .text-block .title {
+  font-weight: bold;
+  padding-right: 8px*12;
+  margin: 0 0 -.1em 0;
+}
+
+.slider .text-block .title.text-xl {
+  font-size: 5em;
+  max-width: 60%;
 }
 
 .slider .text-block.text-block-center span {
   text-shadow: none;
+  max-width: 80%;
+  display: flex;
+  text-align: left;
+  align-items: flex-end;
 }
 
 .slider .flickity-prev-next-button {
@@ -48,4 +66,33 @@
 .slider .flickity-prev-next-button svg {
   color: #fff;
   display: none !important;
+}
+
+/* Pagination dots */ 
+.slider {
+  overflow: visible;
+}
+
+.slider .flickity-page-dots {
+  position: absolute;
+  width: 100%;
+  bottom: -40px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
+  z-index: 50;
+
+  li {
+    border: 2px solid #000;
+    width: 12px; 
+    height: 12px; 
+    opacity: 1;
+  }
+
+  li.is-selected {
+    border-color:$color-pimary-dark;
+    background: $color-pimary-dark;
+  }
 }

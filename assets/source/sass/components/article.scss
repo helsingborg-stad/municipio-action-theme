@@ -2,7 +2,7 @@
 article {
   font-size: 1.1em;
 
-  h1 {
+  > h1:first-child {
     font-size: 4em;
     line-height: 120%;
     margin-bottom: .5em;

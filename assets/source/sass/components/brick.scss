@@ -7,14 +7,23 @@
 &.post-type-archive .breadcrumbs-wrapper + .grid .grid--columns > [class*="grid-"]  {
   background: #13649A;
   background: linear-gradient(-12deg, #13649A 0%, #54B3E4 100%);
+
+  .box-content,
+  .box-post-brick-lead {
+    text-align: left; 
+  }
+
+  .box-post-brick .post-title {
+    font-size: 1.5em;
+  }  
 }
 
 .modularity-mod-posts .grid,
 .mod-posts .grid,
 &.post-type-archive .breadcrumbs-wrapper + .grid .grid--columns {
 
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: -4px;
+    margin-right: -4px;
 
     > [class*="grid-"]  {
       padding: 0;
@@ -29,17 +38,6 @@
 
     }
 
-    > [class*="grid-"] + [class*="grid-"] {
-      &:after {
-        content: ""; 
-        position: absolute;
-        top: 0;
-        left: -2px;
-        bottom: 0;
-        width: 4px;
-        background: #fff;
-      }
-    }
 }
 
 .grid > [class*="grid-"]:nth-child(odd) > .box-post-brick,
@@ -60,6 +58,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border: 2px solid #fff;
 
   &:hover {
     text-decoration: none;
@@ -82,6 +81,8 @@
     font-size: 2.6em;
     font-weight: bold;
     position: relative;
+    line-height: 120%;
+    padding-bottom: 8px;
 
     &:before {
       transition: width 200ms;
@@ -108,10 +109,16 @@
     height: initial;
     text-align: center;
     font-size: 1.1em;
+    width: 100%;
   }
 
   .box-post-brick-date {
     display: none; 
+  }
+
+  .box-post-brick-lead {
+    max-height: 150px;
+    overflow: hidden;
   }
 
   .box-post-brick-lead:after {

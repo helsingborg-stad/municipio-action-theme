@@ -12,8 +12,9 @@
   }
 
   ul li {
-    padding: 8px*2 0;
+    padding: 0; 
   }
+  
 
   > ul li + li {
     border-top: 2px solid #eee !important; 
@@ -26,4 +27,35 @@
   ul li .link-item:before {
     display: none;
   }
+
+  ul li a {
+    padding: 8px*2 0;
+    transition: all 200ms;
+
+    &:before {
+      width: 0;
+    }
+  }
+
+  ul li a:hover {
+    background: $color-pimary-light;
+    color: #fff;
+    padding-left: 8px*2;
+    padding-right: 8px*2;
+    text-decoration: none;
+
+    &:before {
+      content: "";
+      transform: rotate(45deg);
+      border: 1px solid #fff;
+      border-left: none;
+      border-bottom: none;
+      width: .8em;
+      height: .8em;
+      display: inline-block;
+      margin-right: 1em;
+    }
+  }
+
+  
 }
