@@ -1,0 +1,16 @@
+ul.page-numbers {
+  padding: 8px*4;
+  font-size: 1.2em; 
+
+  li a {
+    font-weight: bold;
+    border: none;
+  }
+
+  li span.current {
+    color: $color-pimary-dark;
+    background: none;
+    border: none;
+    font-weight: bold;
+  }
+}

@@ -1,13 +1,17 @@
 .modularity-mod-posts,
-.mod-posts,
-.breadcrumbs-wrapper + .grid .grid--columns {
+.mod-posts {
+  background: #13649A;
+  background: linear-gradient(-12deg, #13649A 0%, #54B3E4 100%);
+}
+
+&.post-type-archive .breadcrumbs-wrapper + .grid .grid--columns > [class*="grid-"]  {
   background: #13649A;
   background: linear-gradient(-12deg, #13649A 0%, #54B3E4 100%);
 }
 
 .modularity-mod-posts .grid,
 .mod-posts .grid,
-.breadcrumbs-wrapper + .grid .grid--columns {
+&.post-type-archive .breadcrumbs-wrapper + .grid .grid--columns {
 
     margin-left: 0;
     margin-right: 0;
@@ -38,6 +42,10 @@
     }
 }
 
+.grid > [class*="grid-"]:nth-child(odd) > .box-post-brick,
+.grid > [class*="grid-"]:nth-child(even) > .box-post-brick {
+  background-color: transparent;
+}
 
 .box-post-brick {
   overflow: hidden;
