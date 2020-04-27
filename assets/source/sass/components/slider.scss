@@ -9,3 +9,43 @@
 .slider .text-block.text-block-center span {
   text-shadow: none;
 }
+
+.slider .flickity-prev-next-button {
+  background: none;
+  border-radius: 0;
+  border: 1px solid #fff;
+  transform: rotate(-45deg);
+  opacity: .7;
+  width: 30px; 
+  height: 30px;
+  transition: all 150ms;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.slider .flickity-prev-next-button.previous {
+  border-right: none;
+  border-bottom: none;
+  left: 40px;
+
+  &:hover {
+    transform: rotate(-45deg) translate(-5%, -5%); 
+  }
+}
+
+.slider .flickity-prev-next-button.next {
+  border-top: none;
+  border-left: none;
+  right: 40px;
+
+  &:hover {
+    transform: rotate(-45deg) translate(5%, 5%); 
+  }
+}
+
+.slider .flickity-prev-next-button svg {
+  color: #fff;
+  display: none !important;
+}
