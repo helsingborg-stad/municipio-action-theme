@@ -1,0 +1,29 @@
+.box.box-panel {
+
+  .box-title {
+    color: $color-pimary-dark; 
+    background: #fff;
+    padding: 8px*2 0; 
+    font-size: 2em;
+  }
+
+  ul {
+    border: none;
+  }
+
+  ul li {
+    padding: 8px*2 0;
+  }
+
+  > ul li + li {
+    border-top: 2px solid #eee !important; 
+  }
+
+  ul li .link-item {
+    left: 0;
+  }
+
+  ul li .link-item:before {
+    display: none;
+  }
+}
