@@ -1,7 +1,6 @@
 /* Footer */
 .main-footer {
-  background: #13649A;
-  background: linear-gradient(-12deg, #13649A 0%, #54B3E4 100%);
+  @include gradientbg(); 
   text-align: center;
   padding: 20px 0 80px 0; 
   border-top: none;

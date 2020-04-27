@@ -2,10 +2,10 @@ var ActionHbg;
 import anime from 'animejs/lib/anime.es.js';
 
 /* Sections */ 
-const codeElements = document.querySelectorAll('section.section .grid, .main-footer .widget_text, .main-footer .logotype, .main-footer .widget_nav_menu');
+const codeElements = document.querySelectorAll('section.section .grid [class*="grid-"], .box.box-panel ul li, .post-type-archive .breadcrumbs-wrapper + .grid .grid--columns > [class*="grid-"], .main-footer .widget_text, .main-footer .logotype, .main-footer .widget_nav_menu');
 
 const observerConfig = {
-    threshold: 0.2
+    threshold: 0.
 };
 
 const observer = new IntersectionObserver((entries) => {

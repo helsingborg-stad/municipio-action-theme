@@ -14,14 +14,14 @@
   ul li {
     padding: 0; 
   }
-  
 
   > ul li + li {
-    border-top: 2px solid #eee !important; 
+    border-top: 2px solid $color-pimary-light !important;
   }
 
   ul li .link-item {
     left: 0;
+    max-width: 70%;
   }
 
   ul li .link-item:before {
@@ -35,6 +35,10 @@
     &:before {
       width: 0;
     }
+  }
+
+  ul li a:hover .date {
+    color: #fff; 
   }
 
   ul li a:hover {

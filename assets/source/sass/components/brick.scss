@@ -4,6 +4,10 @@
   background: linear-gradient(-12deg, #13649A 0%, #54B3E4 100%);
 }
 
+.box:not(.box-news-horizontal):not(.box-panel-secondary):not(.box-news-circular) {
+  border-radius: 0 !important;
+}
+
 &.post-type-archive .breadcrumbs-wrapper + .grid .grid--columns > [class*="grid-"]  {
   background: #13649A;
   background: linear-gradient(-12deg, #13649A 0%, #54B3E4 100%);
