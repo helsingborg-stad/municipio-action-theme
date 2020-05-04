@@ -80,6 +80,7 @@
 }
 
 .section-split {
+  background-color: $color-grayish;
   .section-title {
     font-weight: 900;
   }
@@ -101,4 +102,8 @@
     padding: 0 0 8px*2 0;
     margin: 0 0 8px*3 0;
   }
+}
+
+.grid + .grid.section-submodules {
+  margin-top: 0;
 }

@@ -1,25 +1,17 @@
-.box.box-panel {
-
+.section.text-color-light .box.box-panel {
+  background: none; border
   .box-title {
-    color: $color-pimary-dark; 
-    background: #fff;
-    padding: 8px*2 0; 
-    font-size: 2em;
+    color: #fff; 
+    background-color: transparent;
   }
 
-
   ul {
-
-    @include gradientbg(); 
+    background-color: transparent;
     border: none;
   }
 
   ul li {
-    padding: 0; 
-  }
-
-  > ul li + li {
-    border-top: 2px solid $color-pimary-light !important;
+    padding: 0;
   }
 
   ul li .link-item {
@@ -32,32 +24,19 @@
   }
 
   ul li a {
-    padding: 8px*2 0;
-    transition: all 200ms;
-
-    &:before {
-      width: 0;
-    }
-  }
-  
-  ul li a {
-    text-decoration: none;
-
-    &:before {
-      content: "";
-      transform: rotate(45deg);
-      border: 1px solid $color-pimary-dark;
-      border-left: none;
-      border-bottom: none;
-      width: .8em;
-      height: .8em;
-      display: inline-block;
-      margin-right: 1em;
-    }
+    color: #fff;
+    padding: 8px 0;
   }
 
-  ul li a:hover {
-    padding-left: 8px*2;
+  ul li + li {
+    border-top: none !important;
+  }
+
+  .read-more {
+    display: inline-block;
+    background: none;
+    border: 2px solid $color-white;
+    color: $color-white; 
   }
 
   
