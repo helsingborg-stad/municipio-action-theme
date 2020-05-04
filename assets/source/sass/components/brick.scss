@@ -1,7 +1,6 @@
 .modularity-mod-posts,
 .mod-posts {
-  background: #13649A;
-  background: linear-gradient(-12deg, #13649A 0%, #54B3E4 100%);
+  @include gradientbg(); 
 }
 
 .box:not(.box-news-horizontal):not(.box-panel-secondary):not(.box-news-circular) {
@@ -9,8 +8,7 @@
 }
 
 &.post-type-archive .breadcrumbs-wrapper + .grid .grid--columns > [class*="grid-"]  {
-  background: #13649A;
-  background: linear-gradient(-12deg, #13649A 0%, #54B3E4 100%);
+  @include gradientbg(); 
 
   .box-content,
   .box-post-brick-lead {

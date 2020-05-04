@@ -12,10 +12,8 @@
     line-height: 100%;
     margin-bottom: 8px*2;
 
-    color: #54B3E4; 
-		background: -webkit-linear-gradient(darken($color-primary-heading,2%), $color-primary-heading);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+    color: $color-pimary-dark; 
+		@include gradientbg(); 
   }
 }
 
@@ -25,7 +23,6 @@
 .sidebar-right-sidebar .widget_search,
 .sidebar-left-sidebar .widget_search,
 .box.box-filled .box-content {
-  background: #13649A;
-  background: linear-gradient(-12deg, #13649A 0%, #54B3E4 100%);
+  @include gradientbg(); 
   padding: 40px;
 }

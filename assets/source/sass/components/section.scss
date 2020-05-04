@@ -1,13 +1,40 @@
-.section-full .section-article {
-  .section-title {
-    font-size: calc(50px + 5vw); 
-    line-height: 115%;
+.section-full.fontsize-normal {
+  &.text-color-dark .section-title {
+    color: $color-black; 
+  }
+
+  .section-text {
+    text-align: left;
+  }
+}
+
+.section-full.fontsize-large {
+  &.text-color-dark .section-title {
+    color: $color-primary-heading;
+    font-size: calc(50px + 1vw); 
+    line-height: 120%;
   }
 
   .section-text {
     text-align: left;
     font-size: calc(1em + 0.1vw);
   }
+}
+
+.section-full.fontsize-xlarge {
+  .section-title {
+    font-size: calc(50px + 3vw); 
+    line-height: 115%;
+  }
+
+  .section-text {
+    text-align: left;
+    font-size: calc(1em + 0.2vw);
+  }
+}
+
+.section-full .section-article {
+  
 
   .section-title + .section-text {
     margin-top: 2em;
@@ -49,5 +76,24 @@
   .section-article {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+.section-split .section-article {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.section-split.padding-lg {
+
+  .section-article {
+    padding: 8px*8; 
+  }
+
+  .section-title {
+    color: $color-black;
+    border-bottom: 1px solid $color-black;
+    padding: 0 0 8px*2 0;
+    margin: 0 0 8px*3 0;
   }
 }

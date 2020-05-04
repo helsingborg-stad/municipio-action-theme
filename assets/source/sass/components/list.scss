@@ -7,7 +7,10 @@
     font-size: 2em;
   }
 
+
   ul {
+
+    @include gradientbg(); 
     border: none;
   }
 

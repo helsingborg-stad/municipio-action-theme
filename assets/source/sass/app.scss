@@ -2,15 +2,13 @@
 
 .is-child-theme {
 
-	$color-pimary-light: #54B3E4; 
-	$color-pimary-dark: #13649A; 
-	$color-primary-heading: rgb(2,149,218);
+	$color-pimary-light: #CD4697; 
+	$color-pimary-dark: #6C1D7E; 
+	$color-primary-heading:#A30083;
+	$color-black: #000; 
 
 	h1, h2 {
-		color: #54B3E4 !important; 
-		background: -webkit-linear-gradient(darken($color-primary-heading,2%), $color-primary-heading);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+		color: $color-primary-heading; 
 	}
 
 	h3, h4, h5, h6 {
