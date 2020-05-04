@@ -48,12 +48,10 @@
   /* Footer content */
   h1.footer-title,
   h2.footer-title {
-    color: #fff !important;
+    color: $color-white;
     font-size: 25px;
     font-weight: 600;
     background: none;
-    -webkit-background-clip: none;
-    -webkit-text-fill-color: #fff;
   }
 
   .widget_text {

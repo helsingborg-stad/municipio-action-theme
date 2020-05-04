@@ -79,9 +79,14 @@
   }
 }
 
-.section-split .section-article {
-  padding-left: 0;
-  padding-right: 0;
+.section-split {
+  .section-title {
+    font-weight: 900;
+  }
+  .section-article {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .section-split.padding-lg {

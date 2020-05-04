@@ -33,8 +33,7 @@
 .nav-mobile-menu {
 
   .nav-mobile {
-    background: #13649A;
-    background: linear-gradient(-12deg, #13649A 0%, #54B3E4 100%);
+    @include gradientbg(); 
 
     > ul {
       max-width: 600px;
@@ -48,7 +47,7 @@
   }
 
   .search {
-    background: #fff;
+    background: $color-white;
 
     .input-group,
     .input-group-addon-btn {
