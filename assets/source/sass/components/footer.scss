@@ -19,14 +19,29 @@
     max-width: 850px;
     margin: 0 auto;
 
+    @media only screen and (max-width: 768px) {
+      display: block;
+    }
+
     li {
       display: inline-block;
+
+      @media only screen and (max-width: 768px) {
+        display: block;
+        padding: 8px*2; 
+      }
     }
 
     li a {
       color: #fff;
       text-decoration: none;
       font-size: 18px;
+      display: inline-block;
+      transition: transform 100ms; 
+
+      &:hover {
+        transform: scale3d(1.1, 1.1, 1.1);
+      }
     }
   }
 
@@ -35,14 +50,19 @@
   h2.footer-title {
     color: #fff !important;
     font-size: 25px;
-    font-weight: 400;
+    font-weight: 600;
     background: none;
     -webkit-background-clip: none;
     -webkit-text-fill-color: #fff;
   }
 
   .widget_text {
-    margin: 60px 0;
+    margin: 8px*3 auto;
+    padding: 8px*4 0;
+    border: 1px solid $color-white; 
+    max-width: 700px;
+    border-left: none;
+    border-right: none;
   }
 
   .c-footerinfo {
@@ -63,7 +83,7 @@
 
     &__phone-number {
       font-size: 40px;
-      font-weight: bold;
+      font-weight: 600;
     }
 
     &__email {
