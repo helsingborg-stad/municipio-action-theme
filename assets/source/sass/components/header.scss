@@ -92,14 +92,8 @@ $logotypeHeight: 54px;
   }
 
   .navbar nav > ul > li.current-menu-item > a {
-    color: $color-pimary-dark;
+    color: rgba($color-black, .6);
     text-decoration: none;
-
-    &:before {
-      width: 100%;
-      transform: translate(-50%, 0);
-      opacity: 1;
-    }
   }
 
   .navbar nav > ul > li.current-page-ancestor > a {

@@ -1,0 +1,30 @@
+{
+  "name": "helsingborg-stad/action-municipio-childtheme",
+  "description": "Custom tailored theme for action.helsingborg.se.",
+  "license": "MIT",
+  "type": "wordpress-theme",
+  "authors": [
+      {
+          "name": "Sebastian Thulin",
+          "email": "sebastian.thulin@helsingborg.se"
+      }
+  ],
+  "repositories": [
+      {
+          "type":"composer",
+          "url":"https://wpackagist.org"
+      }
+  ],
+  "require": {
+  },
+  "extra" : {
+      "installer-paths" : {
+          "vendor/{$name}/": ["type:wordpress-plugin"]
+      }
+  },
+
+  "scripts": {
+      "post-update-cmd": [
+      ]
+  }
+}
