@@ -1,11 +1,10 @@
-var ActionHbg;
+
 import anime from 'animejs/lib/anime.es.js';
 
-/* Sections */ 
-const codeElements = document.querySelectorAll('section.section .grid [class*="grid-"], .box.box-panel ul li, .post-type-archive .breadcrumbs-wrapper + .grid .grid--columns > [class*="grid-"], .main-footer .widget_text, .main-footer .logotype, .main-footer .widget_nav_menu');
+const codeElements = document.querySelectorAll('section.section .grid [class*="grid-"], .box.box-panel ul li, .post-type-archive .breadcrumbs-wrapper + .grid .grid--columns > [class*="grid-"], .main-footer .widget_text, .main-footer .logotype, .main-footer .widget_nav_menu, .slider .slider-image > span');
 
 const observerConfig = {
-    threshold: 0.
+    threshold: 0.2
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -18,6 +17,7 @@ const observer = new IntersectionObserver((entries) => {
                 easing: 'spring(1, 80, 10, 0)',
                 delay: 150
             });
+            
         } else {
             anime({
                 targets: entry.target,
@@ -34,13 +34,6 @@ codeElements.forEach(codeElement => {
     observer.observe(codeElement);
 });
 
-/* Menu */
-anime({
-  targets: '.home .site-header',
-  opacity: [0,1],
-  delay: 400,
-  easing: 'spring(1, 80, 10, 0)'
-});
 
 anime({
   targets: '.home .logotype .letter',
@@ -48,6 +41,5 @@ anime({
   delay: anime.stagger(150, {start: 0}),
   easing: 'spring(1, 80, 10, 0)'
 });
-
-
-
+console.log(document.getElementsByClassName("nav-group-overflow"));
+console.log(document.getElementsByClassName("nav-group-overflow").classList.remove("nav-group-overflow")); 

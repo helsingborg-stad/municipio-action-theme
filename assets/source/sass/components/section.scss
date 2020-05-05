@@ -1,3 +1,13 @@
+.section.effect-inner-shadow {
+  @include gradientbg(135deg,true); 
+  box-shadow: none;
+}
+
+.section.padding-sm {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .section-full.fontsize-normal {
   &.text-color-dark .section-title {
     color: $color-black; 
@@ -35,7 +45,6 @@
 
 .section-full .section-article {
   
-
   .section-title + .section-text {
     margin-top: 2em;
   }
@@ -51,6 +60,10 @@
       color: $color-pimary-light; 
     }
   }
+}
+
+.modularity-mod-section-featured + .modularity-mod-section-featured {
+  margin-top: $base*10; 
 }
 
 .section-featured {
@@ -76,6 +89,7 @@
   .section-article {
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
   }
 }
 
@@ -101,6 +115,7 @@
     border-bottom: 1px solid $color-black;
     padding: 0 0 8px*2 0;
     margin: 0 0 8px*3 0;
+    font-weight: 600;
   }
 }
 

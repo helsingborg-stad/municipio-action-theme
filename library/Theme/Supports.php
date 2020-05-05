@@ -9,6 +9,7 @@ class Supports
         add_filter('body_class', array($this, 'noMaterialDesign'));
         add_filter('Municipio/desktop_menu_breakpoint', array($this, 'menuBreakpoint'));
         add_filter('Municipio/mobile_menu_breakpoint', array($this, 'mobileMenuBreakpoint')); 
+        add_filter('Municipio/Jumbo/NavGroupClass', '__return_false');
     }
 
     public function noMaterialDesign($classes)

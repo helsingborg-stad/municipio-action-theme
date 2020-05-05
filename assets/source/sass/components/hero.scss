@@ -1,0 +1,8 @@
+.hero {
+  padding-bottom: $base*8;
+  overflow: hidden;
+  background: $color-white;
+  .stripe {
+    height: calc(100% - #{$base*8});
+  }
+}

@@ -1,5 +1,10 @@
-@mixin gradientbg($deg: 135deg) {
+@mixin gradientbg($deg: 135deg, $important: false) {
 
-  background: $color-pimary-dark;
-  background: linear-gradient($deg, $color-pimary-light, $color-pimary-dark);
+  @if $important == true {
+    background: $color-pimary-dark !important;
+    background: linear-gradient($deg, $color-pimary-light, $color-pimary-dark) !important;
+  } @else {
+    background: $color-pimary-dark;
+    background: linear-gradient($deg, $color-pimary-light, $color-pimary-dark);
+  }
 }

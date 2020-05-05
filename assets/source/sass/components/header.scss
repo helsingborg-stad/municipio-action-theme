@@ -3,6 +3,18 @@ $headerHeight: 140px;
 $logotypeHeight: 54px;
 #site-header.site-header {
 
+  animation: fade-in;
+
+  .nav-group-overflow {
+    width: calc(100% + 10vw);
+    margin-left: -10vw;
+    display: block;
+    > ul {
+      width: 100%;
+      display: block;
+    }
+  }
+
   .navbar {
     background: $color-white;
     color: $color-black; 

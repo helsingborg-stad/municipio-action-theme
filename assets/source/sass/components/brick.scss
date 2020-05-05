@@ -8,7 +8,11 @@
 }
 
 &.post-type-archive .breadcrumbs-wrapper + .grid .grid--columns > [class*="grid-"]  {
-  @include gradientbg(); 
+  @include gradientbg();
+
+  .box-post-brick {
+    border: 2px solid $color-white;
+  }
 
   .box-content,
   .box-post-brick-lead {
@@ -17,15 +21,21 @@
 
   .box-post-brick .post-title {
     font-size: 1.5em;
-  }  
+  }
+}
+
+.mod-posts {
+  [class*="grid-"] + [class*="grid-"] {
+    border-left: 2px solid $color-white;
+  }
 }
 
 .modularity-mod-posts .grid,
 .mod-posts .grid,
 &.post-type-archive .breadcrumbs-wrapper + .grid .grid--columns {
 
-    margin-left: -4px;
-    margin-right: -4px;
+    margin-left: - ($base/2);
+    margin-right: - ($base/2);
 
     > [class*="grid-"]  {
       padding: 0;
@@ -39,7 +49,6 @@
       }
 
     }
-
 }
 
 .grid > [class*="grid-"]:nth-child(odd) > .box-post-brick,
@@ -47,6 +56,7 @@
   background-color: transparent;
 }
 
+/* The post brick */
 .box-post-brick {
   overflow: hidden;
   position: absolute;
@@ -60,7 +70,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px solid #fff;
 
   &:hover {
     text-decoration: none;
@@ -125,7 +134,7 @@
   }
 
   .box-post-brick-lead {
-    max-height: 150px;
+    max-height: 56px;
     overflow: hidden;
   }
 

@@ -1,8 +1,10 @@
 .section.text-color-light .box.box-panel {
-  background: none; border
+  background: none;
   .box-title {
-    color: #fff; 
-    background-color: transparent;
+    color: $color-white; 
+    background-color: $none;
+    border-bottom: none;
+    font-size: 1.5em;
   }
 
   ul {
@@ -25,19 +27,47 @@
 
   ul li a {
     color: #fff;
-    padding: 8px 0;
+    padding: $base/2 0;
   }
 
   ul li + li {
-    border-top: none !important;
+    border-top: none;
   }
 
   .read-more {
-    display: inline-block;
+    display: inline-block !important;
     background: none;
-    border: 2px solid $color-white;
-    color: $color-white; 
+    border: none;
+    text-indent: -9999px;
+    line-height: 0;
+    margin: $base*4 50% $base*2 50% !important;
+    transform: translate(-50%);
+
+    &:after {
+      content: "";
+      border-radius: 0;
+      border: 1px solid #fff;
+      transform: rotate(-45deg);
+      width: 30px; 
+      height: 30px;
+      transition: all 150ms;
+      display: block;
+      border-top: none;
+      border-right: none;
+      margin: -15px auto 0 auto;
+    }
+
+    &:hover:after {
+      border-width: 3px;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
   }
 
-  
+  .date {
+    color: inherit;
+    font-size: 1em;
+  }
 }
