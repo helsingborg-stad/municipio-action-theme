@@ -106,13 +106,18 @@
 
 .section-split.padding-lg {
   .section-article {
-    padding: 8px*8; 
+    padding: $base*8; 
+
+    @media only screen and (max-width: 768px) { 
+      padding: $base*4; 
+    }
   }
 
   .section-title {
     padding: 0 0 8px*2 0;
     margin: 0 0 8px*3 0;
     font-weight: 600;
+    font-size: 1.8em;
   }
 }
 
