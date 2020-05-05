@@ -105,17 +105,30 @@
 }
 
 .section-split.padding-lg {
-
   .section-article {
     padding: 8px*8; 
   }
 
   .section-title {
-    color: $color-black;
-    border-bottom: 1px solid $color-black;
     padding: 0 0 8px*2 0;
     margin: 0 0 8px*3 0;
     font-weight: 600;
+  }
+}
+
+.section-split.text-color-light.padding-lg {
+  @include gradientbg(135deg,true); 
+  .section-title {
+    border-bottom: 1px solid $color-white;
+    color: $color-white;
+  }
+}
+
+.section-split.text-color-dark.padding-lg {
+  @include gradientbg(135deg,true); 
+  .section-title {
+    border-color: $color-black;
+    border-bottom: 1px solid $color-black;
   }
 }
 
