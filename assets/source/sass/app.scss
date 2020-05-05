@@ -20,6 +20,14 @@
 		color: #000;
 	}
 
+	ul, ol {
+		list-style: none;
+		li:before {
+			top: 0.7em !important;
+			height: 2px !important;
+		}
+	}
+
 	.grid {
 		margin-left: -32px;
 		margin-right: -32px;

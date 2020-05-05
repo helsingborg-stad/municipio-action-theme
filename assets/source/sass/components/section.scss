@@ -3,6 +3,14 @@
   box-shadow: none;
 }
 
+.section.text-color-dark .section-article .ul {
+  border-bottom: 1px solid $color-black;
+}
+
+.section.text-color-light .section-article .ul {
+  border-bottom: 1px solid $color-white;
+}
+
 .section.padding-sm {
   padding-top: 0;
   padding-bottom: 0;
