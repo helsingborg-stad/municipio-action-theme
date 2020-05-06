@@ -14,9 +14,10 @@
   /* Footer menu */ 
   .menu {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
-    justify-content: space-between;
-    max-width: 850px;
+    max-width: 950px;
     margin: 0 auto;
 
     @media only screen and (max-width: 768px) {
@@ -33,11 +34,14 @@
     }
 
     li a {
+      word-wrap: none;
       color: #fff;
       text-decoration: none;
       font-size: 18px;
       display: inline-block;
       transition: transform 100ms; 
+      white-space: nowrap;
+      padding: $base $base*2;
 
       &:hover {
         transform: scale3d(1.1, 1.1, 1.1);

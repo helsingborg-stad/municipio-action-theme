@@ -1,6 +1,8 @@
 .section.effect-inner-shadow {
   @include gradientbg(135deg,true); 
-  box-shadow: none;
+  &:after {
+    box-shadow: none;
+  }
 }
 
 .section.text-color-dark .section-article .ul {
