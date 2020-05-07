@@ -48,7 +48,8 @@
 
 .modularity-mod-posts .grid,
 .mod-posts .grid,
-&.post-type-archive .breadcrumbs-wrapper + .grid .grid--columns {
+&.post-type-archive .breadcrumbs-wrapper + .grid .grid--columns,
+&.blog .breadcrumbs-wrapper + .grid .grid--columns {
 
     margin-left: - ($base/2);
     margin-right: - ($base/2);
