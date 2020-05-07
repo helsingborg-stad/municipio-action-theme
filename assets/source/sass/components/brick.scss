@@ -7,7 +7,8 @@
   border-radius: 0 !important;
 }
 
-&.post-type-archive .breadcrumbs-wrapper + .grid .grid--columns > [class*="grid-"]  {
+&.post-type-archive .breadcrumbs-wrapper + .grid .grid--columns > [class*="grid-"],
+&.blog .breadcrumbs-wrapper + .grid .grid--columns > [class*="grid-"] {
   @include gradientbg();
 
   .box-post-brick {
@@ -26,12 +27,9 @@
 
 .mod-posts {
   [class*="grid-"]+ [class*="grid-"] {
-
     @media only screen and (min-width: 896px) { 
       border-left: 2px solid $color-white;
     }
-
-    
   }
 
   [class*="grid-"] {
