@@ -8,11 +8,12 @@
 }
 
 &.post-type-archive .breadcrumbs-wrapper + .grid .grid--columns > [class*="grid-"],
-&.blog .breadcrumbs-wrapper + .grid .grid--columns > [class*="grid-"] {
+&.blog .breadcrumbs-wrapper + .grid .grid--columns {
   @include gradientbg();
 
   .box-post-brick {
     border: 2px solid $color-white;
+    margin: -2px;
   }
 
   .box-content,
