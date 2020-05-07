@@ -1,0 +1,85 @@
+.accordion-list,
+.accordion-boxes,
+.accordion-box {
+
+  .accordion-section {
+    background: none;
+    border: none;
+  }
+
+  .accordion-section {
+    margin-top: $base*2;
+  }
+
+  .accordion-toggle {
+    background: none;
+    padding: 0; 
+    border: none;
+
+    &:before {
+      border: 1px solid #000;
+      width: ($base/2)*3;
+      height: ($base/2)*3;
+      transform: rotate(45deg) translate(-25%, -25%);
+      border-top: none;
+      border-left: none;
+      content: "";
+      top: 25%;
+      right: 3px;
+    }
+
+    &.minus {
+      border-bottom: none;
+      border-radius: $base/2 $base/2 0 0;
+    }
+
+    h4 {
+      font-weight: bold;
+      color: $color-pimary-dark;
+    }
+
+    &.minus:before {
+      transform: rotate(-135deg) translate(25%, 25%);
+      top: 50%;
+    }
+  }
+
+  .accordion-content {
+    position: relative;
+    background: none;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: $base 0 $base*4 0; 
+    margin-bottom: $base*4;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .accordion-section:last-child .accordion-content {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.text-color-light {
+  .accordion-toggle {
+    h4 {
+      color: $color-white;
+    }
+
+    &:before {
+      border-color: $color-white;
+    }
+  }
+
+  .accordion-content {
+    border-bottom: 1px solid $color-white;
+  }
+  .accordion-content article {
+    color: $color-white;
+  }
+}

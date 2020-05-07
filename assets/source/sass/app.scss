@@ -4,7 +4,7 @@
 
 	$color-pimary-light: #ce5095; 
 	$color-pimary-medium: #ce5095; 
-	$color-pimary-dark: #752480; 
+	$color-pimary-dark: #742480; 
 	$color-primary-heading:#a41680;
 	$color-black: #000; 
 	$color-white: #fff; 
@@ -44,6 +44,7 @@
 
 	@import 'animations'; 
 
+	@import 'components/accordion';
 	@import 'components/hero';
 	@import 'components/article';
 	@import 'components/pagefooter';
