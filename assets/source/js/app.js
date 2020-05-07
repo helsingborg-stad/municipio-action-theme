@@ -34,12 +34,9 @@ codeElements.forEach(codeElement => {
     observer.observe(codeElement);
 });
 
-
 anime({
   targets: '.home .logotype .letter',
   opacity: [0,1],
   delay: anime.stagger(150, {start: 0}),
   easing: 'spring(1, 80, 10, 0)'
 });
-console.log(document.getElementsByClassName("nav-group-overflow"));
-console.log(document.getElementsByClassName("nav-group-overflow").classList.remove("nav-group-overflow")); 
