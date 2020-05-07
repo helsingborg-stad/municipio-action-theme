@@ -12,8 +12,7 @@
   @include gradientbg();
 
   .box-post-brick {
-    border: 2px solid $color-white;
-    margin: -2px;
+    outline: 2px solid $color-white;
   }
 
   .box-content,
