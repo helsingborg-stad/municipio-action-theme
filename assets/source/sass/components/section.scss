@@ -104,9 +104,10 @@
   .section-content {
     width: 100%; 
     display: block;
-    flex: initial;
+    flex: none;
     max-width: 100%;
-
+    margin-left: auto;
+    margin-right: auto;
     img {
       width: auto;
       height: 180px;
