@@ -5,12 +5,12 @@ const codeElements = document.querySelectorAll('section.section .grid [class*="g
 
 const observerConfig = {
     threshold: 0.2,
-    rootMargin: '-32px'
+    rootMargin: '40px'
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.intersectionRatio > observerConfig.threshold) {
+        if (entry.isIntersecting) {
             anime({
                 targets: entry.target,
                 opacity: [0,1],
