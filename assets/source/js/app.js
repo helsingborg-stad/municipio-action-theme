@@ -41,7 +41,7 @@ anime({
   easing: 'spring(1, 80, 10, 0)'
 });
 
-window.fitText( document.querySelectorAll(".box.box-post-brick .post-title"), .9, {
+window.fitText( document.querySelectorAll(".home .box.box-post-brick .post-title"), .9, {
     minFontSize: '30px',
     maxFontSize: '50px'
 });

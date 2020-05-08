@@ -111,7 +111,6 @@
     position: relative;
     line-height: 120%;
     padding-bottom: 8px; 
-    white-space: nowrap;
 
     &:before {
       transition: width 200ms;
@@ -155,4 +154,8 @@
   .box-post-brick-lead:after {
     display: none; 
   }
+}
+
+.home .box-post-brick .post-title {
+  white-space: nowrap;
 }
