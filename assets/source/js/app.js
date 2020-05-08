@@ -40,3 +40,14 @@ anime({
   delay: anime.stagger(150, {start: 0}),
   easing: 'spring(1, 80, 10, 0)'
 });
+
+window.fitText( document.querySelectorAll(".box.box-post-brick .post-title"), .9, {
+    minFontSize: '30px',
+    maxFontSize: '50px'
+});
+$( document ).ready(function() {
+    $('.section-text').filter(function() {
+        var text = $(this).text().replace(/\s*/g, '');
+        return !text;
+    }).hide();
+}); 

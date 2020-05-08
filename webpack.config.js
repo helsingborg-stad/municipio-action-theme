@@ -23,7 +23,7 @@ module.exports = {
      * Add your entry files here
      */
     entry: {
-        'js/app': './assets/source/js/app.js',
+        'js/app': ['./assets/source/js/fittext.js', './assets/source/js/app.js'],
         'css/app': './assets/source/sass/app.scss',
         'css/admin': './assets/source/sass/admin.scss'
     },
