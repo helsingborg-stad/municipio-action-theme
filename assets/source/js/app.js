@@ -4,7 +4,8 @@ import anime from 'animejs/lib/anime.es.js';
 const codeElements = document.querySelectorAll('section.section .grid [class*="grid-"], .box.box-panel ul li, .post-type-archive .breadcrumbs-wrapper + .grid .grid--columns > [class*="grid-"], .main-footer .widget_text, .main-footer .logotype, .main-footer .widget_nav_menu, .slider .slider-image > span');
 
 const observerConfig = {
-    threshold: 0.2
+    threshold: 0.2,
+    rootMargin: '-32px'
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -17,7 +18,6 @@ const observer = new IntersectionObserver((entries) => {
                 easing: 'spring(1, 80, 10, 0)',
                 delay: 150
             });
-            
         } else {
             anime({
                 targets: entry.target,
