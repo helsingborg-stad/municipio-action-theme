@@ -91,6 +91,13 @@ $logotypeHeight: 54px;
       transform: translate(-50%, 0);
       opacity: 1;
     }
+
+    &:hover,
+    &:active, 
+    &:visited, 
+    &:focus {
+      text-decoration: none;
+    }
   }
 
   .navbar nav > ul > li.current-menu-item > a {
