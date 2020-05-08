@@ -38,6 +38,13 @@
 		}
 	}
 
+	div:focus,
+	a:focus,
+	label:focus,
+	section:focus {
+		outline-color: #d35098;
+	}
+
 
 	@import 'mixin/background'; 
 
