@@ -1,5 +1,11 @@
 .section.effect-inner-shadow {
-  @include gradientbg(135deg,true); 
+  @media only screen and (min-width: 896px) { 
+    @include gradientbg(135deg,true);
+  }
+  @media only screen and (max-width: 896px) { 
+    background-color:$color-white;
+  } 
+
   &:after {
     box-shadow: none;
   }
