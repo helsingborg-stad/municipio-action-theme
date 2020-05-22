@@ -14,16 +14,12 @@ const observer = new IntersectionObserver((entries) => {
             anime({
                 targets: entry.target,
                 opacity: [0,1],
-                translateY: ['20px','0px'],
-                easing: 'spring(1, 80, 10, 0)',
                 delay: 150
             });
         } else {
             anime({
                 targets: entry.target,
                 opacity: [1,0],
-                translateY: ['0','20px'],
-                easing: 'spring(1, 80, 10, 0)' , 
                 delay: 150
             });
         }
@@ -37,8 +33,7 @@ codeElements.forEach(codeElement => {
 anime({
   targets: '.home .logotype .letter',
   opacity: [0,1],
-  delay: anime.stagger(150, {start: 0}),
-  easing: 'spring(1, 80, 10, 0)' //
+  delay: anime.stagger(150, {start: 0})
 });
 
 window.fitText( document.querySelectorAll(".home .box.box-post-brick .post-title"), .9, {
