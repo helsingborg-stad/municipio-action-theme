@@ -7,7 +7,8 @@
   }
   
 
-  %caret {
+  %caret { 
+    color:black; 
     display: inline-block;
     width: 0;
     height: 0;
@@ -19,6 +20,13 @@
     border-left: 4px solid transparent;
   }
 
+  .nav > .menu-item > a.c-dropdown__toggle::after{
+    @extend %caret;
+    display: inline-block !important;    
+    content:''; 
+    transform: rotate(0);
+    transition: transform .15s ease-in-out;
+  }
 
   .c-dropdown__toggle::after {
     @extend %caret;

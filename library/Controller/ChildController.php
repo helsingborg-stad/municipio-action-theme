@@ -12,7 +12,7 @@ class ChildController
     public function data($data)
     {
         // $data['mainMenu'] = $this->getWordpressMenuItemsBySlug('main-menu');
-        $classes = array('nav');
+        $classes = array(); 
 
         if (!empty(get_field('nav_primary_align', 'option'))) {
             $classes[] = 'nav-' . get_field('nav_primary_align', 'option');
