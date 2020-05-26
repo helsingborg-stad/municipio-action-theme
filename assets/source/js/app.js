@@ -37,8 +37,9 @@ anime({
   delay: anime.stagger(150, {start: 0})
 });
 
-if(document.querySelectorAll(".home .box.box-post-brick .post-title").length>0 ){
-    window.fitText( document.querySelectorAll(".home .box.box-post-brick .post-title"), .9, {
+let brickTitle = document.querySelectorAll(".home .box.box-post-brick .post-title");
+if(brickTitle.length > 0 ){
+    window.fitText( brickTitle, .9, {
         minFontSize: '30px',
         maxFontSize: '50px'
     });
