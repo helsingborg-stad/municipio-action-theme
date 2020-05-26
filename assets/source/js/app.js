@@ -2,7 +2,6 @@
 import anime from 'animejs/lib/anime.es.js';
 import dropdownComponents from './dropdown';
 
-
 const codeElements = document.querySelectorAll('section.section .grid [class*="grid-"], .box.box-panel ul li, .post-type-archive .breadcrumbs-wrapper + .grid .grid--columns > [class*="grid-"], .main-footer .widget_text, .main-footer .logotype, .main-footer .widget_nav_menu, .slider .slider-image > span');
 
 const observerConfig = {
@@ -38,10 +37,14 @@ anime({
   delay: anime.stagger(150, {start: 0})
 });
 
-window.fitText( document.querySelectorAll(".home .box.box-post-brick .post-title"), .9, {
-    minFontSize: '30px',
-    maxFontSize: '50px'
-});
+if(document.querySelectorAll(".home .box.box-post-brick .post-title").length>0 ){
+    window.fitText( document.querySelectorAll(".home .box.box-post-brick .post-title"), .9, {
+        minFontSize: '30px',
+        maxFontSize: '50px'
+    });
+}
+
+
 $( document ).ready(function() {
     $('.section-text').filter(function() {
         var text = $(this).text().replace(/\s*/g, '');
@@ -51,4 +54,4 @@ $( document ).ready(function() {
 
 window.addEventListener('DOMContentLoaded', function(event) {
     dropdownComponents();
-  });
+});

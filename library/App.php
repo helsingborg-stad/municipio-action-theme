@@ -9,6 +9,5 @@ class App
         new \ActionHbg\Theme\Navigation(); 
         new \ActionHbg\Theme\Enqueue();
         new \ActionHbg\Theme\Supports();
-        
     }
 }

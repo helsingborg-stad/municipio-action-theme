@@ -7,6 +7,7 @@ if (file_exists(dirname(ABSPATH) . '/vendor/autoload.php')) {
     require_once dirname(ABSPATH) . '/vendor/autoload.php';
 }
 
+//Include theme functions
 require_once ACTIONHBG_PATH . 'library/Vendor/Psr4ClassLoader.php';
 $loader = new ACTIONHBG\Vendor\Psr4ClassLoader();
 $loader->addPrefix('ActionHbg', ACTIONHBG_PATH . 'library');
