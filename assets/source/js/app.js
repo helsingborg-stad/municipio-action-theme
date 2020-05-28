@@ -1,6 +1,7 @@
 
 import anime from 'animejs/lib/anime.es.js';
 import dropdownComponents from './dropdown';
+import megaMenu from './megamenu'; 
 
 const codeElements = document.querySelectorAll('section.section .grid [class*="grid-"], .box.box-panel ul li, .post-type-archive .breadcrumbs-wrapper + .grid .grid--columns > [class*="grid-"], .main-footer .widget_text, .main-footer .logotype, .main-footer .widget_nav_menu, .slider .slider-image > span');
 
@@ -54,5 +55,6 @@ $( document ).ready(function() {
 }); 
 
 window.addEventListener('DOMContentLoaded', function(event) {
-    dropdownComponents();
+    // dropdownComponents();
+    megaMenu(); 
 });

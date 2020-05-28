@@ -18,7 +18,8 @@ $logotypeHeight: 54px;
   .navbar {
     background: $color-white;
     color: $color-black; 
-    max-height: ($headerHeight/6)*5;
+    
+    // max-height: ($headerHeight/6)*5;
   }
 
   .navbar-mainmenu .grid-sm-12.grid-md-4 {
@@ -41,7 +42,8 @@ $logotypeHeight: 54px;
   .navbar nav > ul > li,
   .dropdown {
     line-height: $headerHeight; 
-    height: $headerHeight;
+    height: 100%;
+    vertical-align: text-top;
   }
 
   .dropdown {

@@ -20,14 +20,6 @@
     border-left: 4px solid transparent;
   }
 
-  .nav > .menu-item > a.c-dropdown__toggle::after{
-    @extend %caret;
-    display: inline-block !important;    
-    content:''; 
-    transform: rotate(0);
-    transition: transform .15s ease-in-out;
-  }
-
   .c-dropdown__toggle::after {
     @extend %caret;
     display: inline-block !important;    
@@ -35,13 +27,14 @@
     transform: rotate(0);
     transition: transform .15s ease-in-out;
   }
+
   
   .c-dropdown.is-active > .c-dropdown__toggle:after {
     transform: rotate(180deg);
   }
   
   .c-dropdown .c-dropdown__body {
-    position: absolute;
+    position: relative;
     left: 0;
     top: 100%;
   }
@@ -52,7 +45,11 @@
   }
   
   .c-dropdown > .c-dropdown__body {
+    position:static; 
+    background-color: $color-white;
+    color:$color-black; 
     text-align: left;
+    display: none; 
     visibility: hidden;
     line-height: 1em;
 
@@ -64,8 +61,15 @@
   }
   
   .c-dropdown.is-active > .c-dropdown__body {
-    background-color: $color-black;
-    line-height: 1em;
+    background-color: $color-white;
+    
+    a {
+      color:$color-black; 
+      font-size: 0.85em; 
+      padding-top:0px; 
+    }
+    
+    line-height: .55em; 
 
     visibility: visible;
     opacity: 1;
@@ -76,12 +80,12 @@
     transition: visibility 0s,transform .20s ease-in, opacity .15s ease-in;
 
     padding-left:10px;
-    padding-right:10px; 
+    // padding-right:10px; 
   }
   
   .c-header-desktop {
     .sub-menu {
-      background-color: black;
+      background-color: $color-white;
       top: 150%;
       left: -14px;
       width: 300%;
@@ -103,7 +107,7 @@
       li a {
         display: block;
         padding: $base $base * 2;
-        color: white;
+        color: $color-black;
         opacity: 0.6;
       }
   
