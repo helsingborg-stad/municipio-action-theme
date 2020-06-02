@@ -64,7 +64,7 @@
     background-color: $color-white;
     
     a {
-      color:$color-black; 
+      color:$color-grayish-darker; //$color-black; 
       font-size: 0.85em; 
       padding-top:0px; 
     }
@@ -82,6 +82,14 @@
     padding-left:10px;
     // padding-right:10px; 
   }
+
+  .hovered  {
+    color:$color-black !important; //$color-black; 
+    a {
+      color: black !important; 
+    }
+  }
+  
   
   .c-header-desktop {
     .sub-menu {
