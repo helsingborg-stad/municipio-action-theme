@@ -1,6 +1,8 @@
 /* Header */ 
 $headerHeight: 140px;
 $logotypeHeight: 54px;
+$newsreelHeight:80px;
+
 #site-header.site-header {
 
   animation: fade-in;
@@ -18,6 +20,8 @@ $logotypeHeight: 54px;
   .navbar {
     background: $color-white;
     color: $color-black; 
+
+    margin-top:$newsreelHeight; 
     
     // max-height: ($headerHeight/6)*5;
   }
