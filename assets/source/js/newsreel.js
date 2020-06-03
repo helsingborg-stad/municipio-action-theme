@@ -1,15 +1,19 @@
 export default () => {
     
     const postTypeName = 'newsheadline'; 
-    const url = 'https://actionenv.test/wp-json/wp/v2/' + postTypeName; 
+    const url = '/wp-json/wp/v2/' + postTypeName; 
+    const optionsUrl = '/wp-json/wp/v2/newsOptions'; 
 
     let amount = 0;
     let newsHeadlineElements = []; 
     let currentNews = 0; 
+    let newsReelEnabled = true; 
+
+    let navbarEl = document.querySelector(".navbar"); 
 
     //Animation settings
-    const transitionTime = 800; //fade in and out time in ms. 
-    const pauseTime = 5000; //pause time in ms.
+    let transitionTime=5000 ; //fade in and out time in ms. 
+    let pauseTime = 800; //pause time in ms.
     let animationCounter = 0;
     const animationStep = 1000/30; //in ms
 
@@ -18,18 +22,32 @@ export default () => {
         newsreelContainer = false; 
     const headerEl = document.querySelector("#site-header"); 
 
-    //Get the data from the wp-json api and generate the list of news headlines
-    fetch(url)
-    .then(response => response.json())
-    .then(data => {
-        newsHeadlineElements = generateNewsList(data); 
-        //if there are any headlines to display, then generate the html elements
-        if(newsHeadlineElements.length > 0) { 
-            createNewsReelElements();
-            setCurrentNewsItem(currentNews); 
-            startAnimation(); 
-        }
-    }); 
+    fetch(optionsUrl)
+        .then(response => response.json() )
+        .then(data => {
+            transitionTime = parseInt(data.animation_transition_time);
+            pauseTime = parseInt(data.animation_pause_time);
+            newsReelEnabled = data.enabled; 
+
+            if(newsReelEnabled) {
+                navbarEl.classList.add("news-top-margin");
+                //Get the data from the wp-json api and generate the list of news headlines
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        newsHeadlineElements = generateNewsList(data); 
+                        //if there are any headlines to display, then generate the html elements
+                        if(newsHeadlineElements.length > 0) { 
+                            createNewsReelElements();
+                            setCurrentNewsItem(currentNews); 
+                            startAnimation(); 
+                        }
+                    }); 
+            } else {
+                navbarEl.classList.remove("news-top-margin");
+            }
+
+        }); 
 
 
     function startAnimation(){
@@ -45,10 +63,8 @@ export default () => {
 
     function pause(){
         paused = true; 
-        console.log("paused animation");
     }
     function restart(){
-        console.log("restarted animation");
         paused = false; 
     }
 

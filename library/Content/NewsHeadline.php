@@ -5,6 +5,8 @@ namespace ActionHbg\Content;
 class NewsHeadline { 
     public $postTypeName = 'newsHeadline'; 
     public $postTypeArgs = array(); 
+    public $defaultPauseTime = 5000;
+    public $defaultFadeTime = 800; 
 
     public function __construct()
     {
@@ -15,9 +17,11 @@ class NewsHeadline {
             add_action('init', array(&$this, 'registerPostType'));
             add_action('rest_api_init', array($this, 'registerAcfMetadataInApi'));
             add_action('rest_api_init', array($this, 'registerRestField')); 
+            add_action('rest_api_init', array($this, 'registerOptionsEndpoint')); 
         }
-
     }
+
+
 
     public function registerPostType()
     {
@@ -45,15 +49,15 @@ class NewsHeadline {
         register_post_type($this->postTypeName, $this->postTypeArgs );
         
         add_action( 'add_meta_boxes', array($this,'addUrlMetaBox')  ); 
-        add_action( 'save_post', array($this, 'save_url' )); 
+        add_action( 'save_post', array($this, 'saveUrl' )); 
     }
 
     function addUrlMetaBox()
     {
-        add_meta_box($this->postTypeName . '_url', __('URL'), array($this, 'show_metabox_html'), $this->postTypeName , 'normal', 'high');
+        add_meta_box($this->postTypeName . '_url', __('URL'), array($this, 'showMetaboxHtml'), $this->postTypeName , 'normal', 'high');
     }
 
-    function show_metabox_html()
+    function showMetaboxHtml()
     {
         global $post;
         $custom = get_post_custom($post->ID);
@@ -62,7 +66,7 @@ class NewsHeadline {
         
     }
 
-    function save_url()
+    function saveUrl()
     {
         if(empty($_POST)) return; //why is prefix_teammembers_save_post triggered by add new? 
         global $post;
@@ -137,17 +141,36 @@ class NewsHeadline {
         $custom = get_post_custom($post->ID);
         $function = isset($custom[$this->postTypeName . '_url'][0]) ? $custom[$this->postTypeName . '_url'][0]:'';
         $args = array (
-            'get_callback'  => array($this, 'get_news_url')
+            'get_callback'  => array($this, 'getNewsUrl')
         ); 
         
         register_rest_field(strtolower($this->postTypeName) , 'url', $args ); 
     }
 
-    function get_news_url($object, $field_name, $request)
+    function getNewsUrl($object, $field_name, $request)
     {
         $custom = get_post_custom($post->ID);
         return isset($custom[$this->postTypeName . '_url'][0]) ? $custom[$this->postTypeName . '_url'][0]:'';
     }
 
+    function registerOptionsEndpoint(){
+
+        $args = array(
+            'methods' => 'GET',
+            'callback' => array($this, 'newsOptionsEndpoint')
+        );
+
+        register_rest_route( 'wp/v2', 'newsOptions', $args );
+    }
+
+    function newsOptionsEndpoint( $request ) {
+        $newsOptions = array (
+            "enabled" => get_field( "newsreel_enabled", 'option' ),
+            "animation_pause_time" => get_field("animation_pause_time", 'option'), 
+            "animation_transition_time" => get_field("animation_transition_time", 'option')
+        ); 
+        return $newsOptions; 
+    }
 
 }
+

@@ -1,7 +1,6 @@
 /* Header */ 
 $headerHeight: 140px;
 $logotypeHeight: 54px;
-$newsreelHeight:80px;
 
 #site-header.site-header {
 
@@ -19,10 +18,7 @@ $newsreelHeight:80px;
 
   .navbar {
     background: $color-white;
-    color: $color-black; 
-
-    margin-top:$newsreelHeight; 
-    
+    color: $color-black;     
     // max-height: ($headerHeight/6)*5;
   }
 

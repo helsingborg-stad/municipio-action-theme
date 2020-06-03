@@ -1,5 +1,12 @@
+
+
+.news-top-margin {
+  margin-top: 80px; 
+}
+
 .newsreel-container{
     position:fixed; 
+    font-size: 0.8em;
     left: 0;
     top: 20px;
     width: 100%;
@@ -16,9 +23,7 @@
     grid-template-columns: repeat(10,1);
 }
 
-.newsreel-list{
-   
-}
+
 
 .newsLink{
   opacity:0.2; 
@@ -36,14 +41,6 @@
   opacity:0.01; 
 }
 
-// #carousel-container{
-// 	width: 500px;
-// 	height: 332px;
-// 	position: relative;
-// 	margin: 50px auto 0;
-//   border: 10px solid #000;
-//   border-radius: 10px;
-// }
 #carousel-container > div:first-child{
 	overflow: hidden;
 	max-width: 100%;
@@ -71,7 +68,6 @@
   list-style: none;
 	position: relative;
 	float: left;
-	// transform: translateX(-500px)
 }
 
 #controls{
