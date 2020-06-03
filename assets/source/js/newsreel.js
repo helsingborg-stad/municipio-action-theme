@@ -17,7 +17,9 @@ export default () => {
     let animationCounter = 0;
     const animationStep = 1000/30; //in ms
 
-    let paused = false; 
+    let hoverPaused = false;
+    let manuallyPaused = false; 
+
     let headlineContainer = false,
         newsreelContainer = false; 
     const headerEl = document.querySelector("#site-header"); 
@@ -49,10 +51,11 @@ export default () => {
 
         }); 
 
+    
 
     function startAnimation(){
         setInterval( () => {
-            if(!paused){
+            if(!manuallyPaused && !hoverPaused){
                 animationCounter += animationStep;
             }
             if(animationCounter > pauseTime+transitionTime*2) {
@@ -61,12 +64,6 @@ export default () => {
         }, animationStep); 
     }
 
-    function pause(){
-        paused = true; 
-    }
-    function restart(){
-        paused = false; 
-    }
 
     function next(){
         animationCounter = 0; 
@@ -119,10 +116,10 @@ export default () => {
         backButton.appendChild(backIcon);     
         
         headlineContainer = document.createElement("div"); 
-        headlineContainer.classList.add("headlineContainer");
+        headlineContainer.classList.add("headline-container");
         headlineContainer.id = "headline-container"; 
-        headlineContainer.onmouseover = pause;
-        headlineContainer.onmouseout = restart; 
+        headlineContainer.onmouseover = (ev) => { hoverPaused = true; };
+        headlineContainer.onmouseout = (ev) => { hoverPaused = false; }; 
         
         
         let forwardButton = document.createElement("button");
@@ -135,7 +132,15 @@ export default () => {
         forwardIconPath.setAttribute("d", "M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"); 
         forwardIconPath.classList.add("arrow"); 
         forwardIcon.appendChild(forwardIconPath);
-        forwardButton.appendChild(forwardIcon);     
+        forwardButton.appendChild(forwardIcon);  
+        
+        let pauseButton = document.createElement("button"); 
+        pauseButton.classList.add("pause-button"); 
+        pauseButton.onclick = (event) => {
+            manuallyPaused = !manuallyPaused; 
+            pauseButton.classList.toggle("paused");
+        }
+        
 
         backButton.onclick = (event) => {
             previous();
@@ -147,6 +152,7 @@ export default () => {
         newsreelContainer.appendChild(backButton); 
         newsreelContainer.appendChild(headlineContainer); 
         newsreelContainer.appendChild(forwardButton); 
+        newsreelContainer.appendChild(pauseButton); 
 
     }
 
@@ -178,7 +184,12 @@ export default () => {
         setTimeout(() => {
             newsHeadlineElements[i].classList.remove("disabledNewsLink"); 
             newsHeadlineElements[i].classList.add("activeNewsLink");
-        }, 100)
+            if(newsHeadlineElements[i].offsetWidth > headlineContainer.offsetWidth + 10){
+                newsHeadlineElements[i].classList.add("overflowing");
+            } else {
+                newsHeadlineElements[i].classList.remove("overflowing");
+            }
+        }, 100); 
     }
 
 

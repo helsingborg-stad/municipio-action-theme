@@ -23,6 +23,71 @@
     grid-template-columns: repeat(10,1);
 }
 
+#headline-container {
+  text-align: center;
+  position:absolute;
+  width:46%;
+  height:100%;
+  left:28%;
+  padding-left:10px;
+  padding-right: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  &:hover {
+    text-overflow: clip;
+  }
+
+  
+}
+#headline-container > a {
+  display:inline-block;
+}
+
+#headline-container > a.overflowing {
+  animation: slide 7.0s ease-in;
+  animation-iteration-count:infinite;
+
+  &:hover {
+    animation-play-state: paused;
+    // -webkit-animation: slide 5.0s linear;
+    // -moz-animation: slide 5.0s linear;
+    // -o-animation: slide 5.0s linear;
+    // animation: slide 5.0s linear;
+
+  }
+}
+
+@-webkit-keyframes slide {
+  0% { transform: translateX(0);}
+  // 50% { transform: translateX(-50%);}
+  100% { transform: translateX(-100%);}
+}
+
+@-moz-keyframes slide {
+  0% { transform: translateX(0);}
+  // 50% { transform: translateX(-50%);}
+  100% { transform: translateX(-100%);}
+}
+
+@-o-keyframes slide {
+  0% { transform: translateX(0);}
+  // 50% { transform: translateX(-50%);}
+  100% { transform: translateX(-100%);}
+}
+
+@-khtml-keyframes slide {
+  0% { transform: translateX(0);}
+  // 50% { transform: translateX(-50%);}
+  100% { transform: translateX(-100%);}
+}
+
+@keyframes slide {
+  0% { transform: translateX(0);}
+  // 50% { transform: translateX(-50%);}
+  100% { transform: translateX(-100%);}
+}
 
 
 .newsLink{
@@ -139,4 +204,44 @@
 .newsreel-container .flickity-prev-next-button svg {
   color: #fff;
   display: none !important;
+}
+
+.newsreel-container .pause-button {
+  position:absolute;
+  top:37%;
+  right:4%; 
+  float: right;
+  width:16px;
+  height:16px;
+  opacity: .8;
+  cursor: pointer; 
+
+
+  transition: 100ms all ease;
+  background:transparent;
+  border:0;
+
+  // play state
+  border-style: double;
+  border-width: 0px 0 0px 10px;
+  border-color: transparent transparent transparent #ffffff;
+  
+  &.paused {
+    border-style: solid;
+    border-width: 7px 0 7px 10px;
+  }
+
+  &:hover {
+    opacity: 1;
+    
+
+    // border-color: transparent transparent transparent #ffffff;
+  }
+  &:focus {
+    outline: none; 
+    box-shadow: none; 
+  }
+
+
+
 }
