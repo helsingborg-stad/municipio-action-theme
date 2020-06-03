@@ -14,9 +14,5 @@ export default () => {
     mainMenuElement.onmouseover = showAll;
     mainMenuElement.onmouseout = hideAll; 
 
-    for(let el of dropdownMenus){
-        el.onmouseover = (ev) => { el.classList.add("hovered"); console.log("hovered triggered") }
-        el.onmouseout = (ev) => { el.classList.remove("hovered"); }
-    }
 
   }

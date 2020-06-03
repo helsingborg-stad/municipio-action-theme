@@ -76,7 +76,9 @@ $logotypeHeight: 54px;
     }
 
     &:before {
-      transition: all 200ms;
+      transition: opacity 200ms, 
+                  // transform 0ms,
+                  width 200ms;
       opacity: 0;
       content: "";
       width: 0%;
@@ -84,7 +86,7 @@ $logotypeHeight: 54px;
       background: $color-pimary-dark;
       bottom: 0;
       left: 50%;
-      transform: translate(-50%, 20px);
+      transform: translate(-50%, 0px);
       position: absolute;
     }
 
