@@ -3,6 +3,7 @@ export default () => {
     const mainMenuElement = document.querySelector('#main-menu'); 
     const dropdownMenus = document.querySelectorAll(".js-dropdown");
 
+
     const showAll = (event) => {
         dropdownMenus.forEach( el => { el.classList.add('is-active'); })
     }
@@ -12,5 +13,6 @@ export default () => {
 
     mainMenuElement.onmouseover = showAll;
     mainMenuElement.onmouseout = hideAll; 
+
 
   }
