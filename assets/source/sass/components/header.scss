@@ -1,6 +1,7 @@
 /* Header */ 
 $headerHeight: 140px;
 $logotypeHeight: 54px;
+
 #site-header.site-header {
 
   animation: fade-in;
@@ -17,8 +18,7 @@ $logotypeHeight: 54px;
 
   .navbar {
     background: $color-white;
-    color: $color-black; 
-    
+    color: $color-black;     
     // max-height: ($headerHeight/6)*5;
   }
 
