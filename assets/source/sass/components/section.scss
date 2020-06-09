@@ -69,8 +69,15 @@
   }
 }
 
+.section-article { 
+  @media only screen and (max-width: 896px) { 
+    padding-left: $mobile-side-padding; 
+    padding-right: $mobile-side-padding;
+  } 
+}
+
 .section-full .section-article {
-  
+
   .section-title + .section-text {
     margin-top: 2em;
   }
@@ -133,8 +140,15 @@
     font-weight: 900;
   }
   .section-article {
-    padding-left: 0;
-    padding-right: 0;
+    @media only screen and (max-width: 896px) { 
+      padding-left: $mobile-side-padding; 
+      padding-right: $mobile-side-padding;
+    }
+    @media only screen and (min-width: 896px) { 
+      padding-left: 0;
+      padding-right: 0;
+    }
+
   }
 }
 
@@ -176,6 +190,10 @@
 }
 
 .section-full.padding-md {
+  @media only screen and (max-width: 896px) { 
+    padding-left: $mobile-side-padding; 
+    padding-right: $mobile-side-padding;
+  } 
   padding-top: 5vh; 
   padding-bottom: 5vh; 
 }
