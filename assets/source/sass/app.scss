@@ -10,7 +10,7 @@
 	$color-grayish: #EDEDED;
 	$none: transparent;
 
-	$mobile-side-padding: 2em; 
+	$mobile-side-padding: 1.15em; 
 	
 	$base: 8px;
 
@@ -70,6 +70,7 @@
 	@import 'components/mobilemenu'; 
 	@import 'components/scrolldots'; 
 	@import 'components/cookie-consent'; 
+	@import 'dropdown'; 
 
 
 }
