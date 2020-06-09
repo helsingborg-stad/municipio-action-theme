@@ -1,5 +1,12 @@
 @import 'master';
 
+.logged-in #site-header {
+	top: 46px;
+	@media screen and (min-width: 783px) {
+	  top: 32px;
+	}
+  }
+
 .is-child-theme {
 	$color-pimary-light: #ce5095; 
 	$color-pimary-medium: #a41680; 
@@ -8,6 +15,7 @@
 	$color-black: #000; 
 	$color-white: #fff; 
 	$color-grayish: #EDEDED;
+	$color-grayish-darker: rgb(139, 139, 139);
 	$none: transparent;
 
 	$mobile-side-padding: 1.15em; 
@@ -72,6 +80,7 @@
 	@import 'components/cookie-consent'; 
 	@import 'components/gallery';
 	@import 'components/video'; 
+	@import 'components/newsreel'; 
 	@import 'dropdown'; 
 
 

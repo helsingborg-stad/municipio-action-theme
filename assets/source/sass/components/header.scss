@@ -1,6 +1,7 @@
 /* Header */ 
 $headerHeight: 140px;
 $logotypeHeight: 54px;
+
 #site-header.site-header {
 
   animation: fade-in;
@@ -17,8 +18,8 @@ $logotypeHeight: 54px;
 
   .navbar {
     background: $color-white;
-    color: $color-black; 
-    max-height: ($headerHeight/6)*5;
+    color: $color-black;     
+    // max-height: ($headerHeight/6)*5;
   }
 
   .navbar-mainmenu .grid-sm-12.grid-md-4 {
@@ -41,7 +42,8 @@ $logotypeHeight: 54px;
   .navbar nav > ul > li,
   .dropdown {
     line-height: $headerHeight; 
-    height: $headerHeight;
+    height: 100%;
+    vertical-align: text-top;
   }
 
   .dropdown {
@@ -74,7 +76,9 @@ $logotypeHeight: 54px;
     }
 
     &:before {
-      transition: all 200ms;
+      transition: opacity 200ms, 
+                  // transform 0ms,
+                  width 200ms;
       opacity: 0;
       content: "";
       width: 0%;
@@ -82,7 +86,7 @@ $logotypeHeight: 54px;
       background: $color-pimary-dark;
       bottom: 0;
       left: 50%;
-      transform: translate(-50%, 20px);
+      transform: translate(-50%, 0px);
       position: absolute;
     }
 

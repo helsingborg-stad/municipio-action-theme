@@ -1,6 +1,8 @@
 
 import anime from 'animejs/lib/anime.es.js';
 import dropdownComponents from './dropdown';
+import megaMenu from './megamenu'; 
+import newsReel from './newsreel'; 
 
 const codeElements = document.querySelectorAll('section.section .grid [class*="grid-"], .box.box-panel ul li, .post-type-archive .breadcrumbs-wrapper + .grid .grid--columns > [class*="grid-"], .main-footer .widget_text, .main-footer .logotype, .main-footer .widget_nav_menu, .slider .slider-image > span');
 
@@ -37,8 +39,9 @@ anime({
   delay: anime.stagger(150, {start: 0})
 });
 
-if(document.querySelectorAll(".home .box.box-post-brick .post-title").length>0 ){
-    window.fitText( document.querySelectorAll(".home .box.box-post-brick .post-title"), .9, {
+let brickTitle = document.querySelectorAll(".home .box.box-post-brick .post-title");
+if(brickTitle.length > 0 ){
+    window.fitText( brickTitle, .9, {
         minFontSize: '30px',
         maxFontSize: '50px'
     });
@@ -53,5 +56,7 @@ $( document ).ready(function() {
 }); 
 
 window.addEventListener('DOMContentLoaded', function(event) {
-    dropdownComponents();
+    // dropdownComponents();
+    megaMenu(); 
+    newsReel(); 
 });

@@ -1,0 +1,85 @@
+[{
+    "key": "group_5ed75801bac03",
+    "title": "Newsreel",
+    "fields": [
+        {
+            "key": "field_5ed7582c311e7",
+            "label": "Enabled",
+            "name": "newsreel_enabled",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Om nyhetsslidern \u00e4r aktiverad.",
+            "default_value": 1,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5ed75886311e8",
+            "label": "Animation pause time",
+            "name": "animation_pause_time",
+            "type": "number",
+            "instructions": "Hur l\u00e4nge varje nyhetsrubrik visas p\u00e5 sk\u00e4rmen, i millisekunder (s\u00e5 1000 = 1 sekund).",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 5000,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 100000,
+            "step": ""
+        },
+        {
+            "key": "field_5ed759b9a9b8b",
+            "label": "Animation transition time",
+            "name": "animation_transition_time",
+            "type": "number",
+            "instructions": "Hur l\u00e4nge det tar f\u00f6r en nyhetsrubrik att fada ut och in, i millisekunder.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 800,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 10000,
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-theme-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": ""
+}]
+
