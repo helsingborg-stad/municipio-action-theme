@@ -16,8 +16,7 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             anime({
                 targets: entry.target,
-                opacity: [0,1],
-                translateY: ['0','20px'],	
+                translateY: ['-20px','0'],	
                 easing: 'spring(1, 80, 10, 0)', 
                 delay: 150
             });
