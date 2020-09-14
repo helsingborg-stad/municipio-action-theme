@@ -25,7 +25,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerConfig);
 
 codeElements.forEach(codeElement => {
-    observer.observe(codeElement);
+    //observer.observe(codeElement);
 });
 
 anime({
