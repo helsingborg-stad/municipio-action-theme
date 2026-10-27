@@ -48,7 +48,7 @@
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
     "webpack-config-utils": "^2.3.1",
-    "webpack-dev-server": "^3.5.1",
+    "webpack-dev-server": "^6.1.0",
     "webpack-fix-style-only-entries": "^0.3.0",
     "webpack-manifest-plugin": "^2.0.4",
     "webpack-notifier": "^1.7.0"
